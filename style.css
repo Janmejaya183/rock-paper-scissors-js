@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+h1 {
+  background-color: #081b31;
+  color: #fff;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 5rem;
+  flex-wrap: wrap; /* important for mobile */
+}
+
+.choice {
+  height: 165px;
+  width: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.choice:hover {
+  cursor: pointer;
+  background-color: #081b31;
+}
+
+.score-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+  gap: 5rem;
+  flex-wrap: wrap; /* handles small screens */
+}
+
+#user-score, 
+#comp-score {
+  font-size: 4rem;
+}
+
+#msg {
+  margin-top: 5rem;
+  background-color: #081b31;
+  color: #fff;
+  font-size: 2rem;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+
+/* 📱 Mobile devices */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+    height: auto;
+    line-height: normal;
+    padding: 1rem;
+  }
+
+  .choices {
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .choice {
+    height: 120px;
+    width: 120px;
+  }
+
+  img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .score-board {
+    font-size: 1.5rem;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  #user-score, 
+  #comp-score {
+    font-size: 2.5rem;
+  }
+
+  #msg {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+  .choice {
+    height: 90px;
+    width: 90px;
+  }
+
+  img {
+    height: 70px;
+    width: 70px;
+  }
+
+  #msg {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
